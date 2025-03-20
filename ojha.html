@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPL T20 2025 Ticket Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .ticket-window {
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+        }
+        h2 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        label {
+            font-size: 16px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 4px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 20px;
+            }
+            label, select, input, button {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="ticket-window">
+    <h2>IPL T20 2025 Ticket Booking</h2>
+    
+    <form id="ticketForm">
+        <!-- Match Selection -->
+        <label for="match">Select Match:</label>
+        <select id="match" required>
+            <option value="">-- Select Match --</option>
+            <option value="Match 1: CSK vs MI">Match 1: CSK vs MI</option>
+            <option value="Match 2: RCB vs KKR">Match 2: RCB vs KKR</option>
+            <option value="Match 3: DC vs RR">Match 3: DC vs RR</option>
+            <option value="Match 4: SRH vs LSG">Match 4: SRH vs LSG</option>
+            <option value="Match 5: GT vs PBKS">Match 5: GT vs PBKS</option>
+        </select>
+        
+        <!-- Team Selection -->
+        <label for="team">Select Team:</label>
+        <select id="team" required>
+            <option value="">-- Select Team --</option>
+            <option value="Chennai Super Kings">Chennai Super Kings</option>
+            <option value="Mumbai Indians">Mumbai Indians</option>
+            <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+            <option value="Delhi Capitals">Delhi Capitals</option>
+            <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+            <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+            <option value="Rajasthan Royals">Rajasthan Royals</option>
+            <option value="Punjab Kings">Punjab Kings</option>
+            <option value="Lucknow Super Giants">Lucknow Super Giants</option>
+            <option value="Gujarat Titans">Gujarat Titans</option>
+        </select>
+
+       
+        
+        <!-- Number of Tickets -->
+        <label for="tickets">Number of Tickets:</label>
+        <input type="number" id="tickets" min="1" max="10" required placeholder="Enter number of tickets" />
+        
+
+        <label for="payment">Payment Option:</label>
+        
+        <img src="payment.jpg" alt="image" width="150" height="150" >
+        <h3> UPI-ID :- iplticket@slc</h3>
+        <h3>Ticket price ⟨₹⟩ 499</h3>
+    
+
+           
+       </select>
+        <!-- Buy Now Button -->
+        <button type="button" onclick="bookTickets()">Ticket Booked</button>
+    </form>
+</div>
+
+<script>
+    function bookTickets() {
+        const match = document.getElementById("match").value;
+        const team = document.getElementById("team").value;
+        const tickets = document.getElementById("tickets").value;
+
+        if (match && team && tickets) {
+            alert(`You have successfully booked ${tickets} tickets for ${match} supporting ${team}!`);
+        } else {
+            alert("Please fill in all fields before booking.");
+        }
+    }
+</script>
+
+</body>
+</html>
